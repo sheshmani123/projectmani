@@ -1,0 +1,93 @@
+/* Background overlay */
+.login-popup {
+    position: fixed; /* Fixed positioning to keep the popup in view */
+    z-index: 9999; /* Ensure it appears above other elements */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: gray; /* Dark semi-transparent background */
+    display: grid; /* Center the popup */
+}
+
+/* Popup container styling */
+.login-popup-container {
+    place-self: center; /* Center the popup */
+    width: max(23vw, 330px); /* Responsive width */
+    color: #808080; /* Text color */
+    background-color: white; /* White background for the form */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s; /* Fade-in animation */
+}
+
+/* Title section of the popup */
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black; /* Title color */
+}
+
+/* Input fields styling */
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Button styling */
+.login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: hsl(168, 76%, 31%); /* Green color */
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+.login-popup-container button:hover {
+    background-color: hsl(168, 76%, 23%); /* Darker green on hover */
+}
+
+/* Condition text styling */
+.login-popup-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+}
+
+.login-popup-condition input {
+    margin-top: 5px;
+}
+
+/* Style for the login/signup toggle text */
+.login-popup p span {
+    color: tomato;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Fade-in animation for the popup */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

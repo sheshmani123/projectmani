@@ -1,0 +1,187 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ecf0f1;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Navbar Search Box */
+.navbar-search {
+  flex-grow: 1;
+  margin: 0 15px;
+  max-width: 300px; /* Set a max width for the search box */
+}
+
+.search-bar {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  background-color:rgba(255, 255, 255, 0.848);
+  color: black;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.887);
+}
+
+/* Username Display */
+.navbar-username {
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Navbar Menu Items */
+.navbar-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-menu a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #16a085;
+  transition: background-color 0.3s ease;
+}
+
+/* Active Menu Item Color */
+
+.navbar-menu .active {
+  background-color: #1abc9c;
+}
+
+/* Navbar Right Section (Profile and Logout) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-profile {
+  position: relative;
+}
+
+.navbar-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav-profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: #34495e;
+  border-radius: 5px;
+  width: 180px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+  display: block;
+}
+
+.nav-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-profile-dropdown li:hover {
+  background-color: #16a085;
+}
+
+.nav-profile-dropdown li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-search {
+    margin: 10px 0;
+    width: 100%;
+    max-width: 250px; /* Set a smaller max-width for mobile */
+  }
+
+  .navbar-username {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-menu a {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .logout-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
